@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录失败</title>
+</head>
+<script>
+    var num=5;
+    function countDown(){
+        if(num>0){
+            console.log(num)
+            document.getElementById("countDown").innerText=num--;
+        }else{
+            window.location.href="/toLogin.do"
+        }
+    }
+    function aaa(){
+        setInterval(function(){
+            countDown();
+        },1000)
+    }
+</script>
+<body onload="aaa()">
+登录失败,<span style="color: red" id="countDown"></span>秒后跳转至登录页
+
+</body>
+</html>
